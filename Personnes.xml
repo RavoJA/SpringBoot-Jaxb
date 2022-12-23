@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personnes>
+    <name>Jean Aimé</name>
+    <address>
+        <country>Madagascar</country>
+        <postCode>101</postCode>
+        <zipCode>35</zipCode>
+    </address>
+    <age>32</age>
+    <birthDate>2022-12-23T09:22:29.297+03:00</birthDate>
+    <companies>
+        <company>
+            <companyType>EI</companyType>
+            <name>Test Company</name>
+            <raisonSocial>Info</raisonSocial>
+        </company>
+        <company>
+            <companyType>SARL</companyType>
+            <name>test 2</name>
+            <raisonSocial>Prestation</raisonSocial>
+        </company>
+    </companies>
+</personnes>

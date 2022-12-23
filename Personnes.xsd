@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="personnes" type="personnes"/>
+
+  <xs:complexType name="personnes">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="address" minOccurs="0"/>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element name="birthDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="companies" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="company" type="company" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element name="country" type="xs:string" minOccurs="0"/>
+      <xs:element name="postCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="company">
+    <xs:sequence>
+      <xs:element name="companyType" type="companyType" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="raisonSocial" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="companyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EI"/>
+      <xs:enumeration value="SA"/>
+      <xs:enumeration value="SARL"/>
+      <xs:enumeration value="SARLU"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
